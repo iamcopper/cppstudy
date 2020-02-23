@@ -1,12 +1,8 @@
 #include <iostream>
 #include "mycomplex.hpp"
 
-using namespace std;
-
-ostream&
-operator<< (ostream& os, const mycomplex& x) {
-	return os << '(' << x.real() << ',' << x.imag() << ')';
-}
+using std::cout;
+using std::endl;
 
 int main(int argc, char *argv[])
 {

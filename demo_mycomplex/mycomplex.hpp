@@ -1,6 +1,10 @@
 #ifndef __COMPLEX_HPP__
 #define __COMPLEX_HPP__
 
+#include <iostream>
+
+using std::ostream;
+
 class mycomplex {
 public:
 	mycomplex(double r = 0, double i = 0) :re(r), im(i) { }
@@ -69,6 +73,11 @@ operator== (const mycomplex& x, const mycomplex& y) {
 inline bool
 operator!= (const mycomplex& x, const mycomplex& y) {
 	return x.real() != y.real() || x.imag() != y.imag();
+}
+
+ostream&
+operator<< (ostream& os, const mycomplex& x) {
+	return os << '(' << x.real() << ',' << x.imag() << ')';
 }
 
 #endif /* __COMPLEX_HPP__ */
