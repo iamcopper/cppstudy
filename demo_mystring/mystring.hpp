@@ -3,7 +3,6 @@
 
 #include <cstring>
 #include <iostream>
-using std::ostream;
 
 class mystring {
 public:
@@ -48,7 +47,7 @@ inline mystring::~mystring() {
 	delete[] m_data;
 }
 
-ostream& operator<< (ostream& os, const mystring& str) {
+std::ostream& operator<< (std::ostream& os, const mystring& str) {
 	return os << str.get_c_str();
 }
 

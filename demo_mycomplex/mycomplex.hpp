@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-using std::ostream;
-
 class mycomplex {
 public:
 	mycomplex(double r = 0, double i = 0) :re(r), im(i) { }
@@ -75,8 +73,8 @@ operator!= (const mycomplex& x, const mycomplex& y) {
 	return x.real() != y.real() || x.imag() != y.imag();
 }
 
-ostream&
-operator<< (ostream& os, const mycomplex& x) {
+std::ostream&
+operator<< (std::ostream& os, const mycomplex& x) {
 	return os << '(' << x.real() << ',' << x.imag() << ')';
 }
 
